@@ -1,0 +1,28 @@
+<table class="outer" align="center" width="90%" cellspacing="5" cellpadding="5">
+<{foreach item=player from=$player }> 
+<tr><td class="even"><{$player}></td>
+<td class="odd"><a href="index.php?op=editplayer&amp;playertype=<{$player}>"><{$smarty.const._AM_XPLAYER_EDIT}></a></td>
+<td class="even"><a href="index.php?op=delconf&amp;playertype=<{$player}>"><{$smarty.const._AM_XPLAYER_DELETE}></a></td></tr>
+<{/foreach}> 
+</table>
+<br>
+<form action="index.php?op=newplayer" method="post">
+<table class="outer" align="center" width="90%" cellspacing="5" cellpadding="5">
+<tr>
+<td colspan="2" class="even"><b><{$smarty.const._AM_XPLAYER_NEWPLAYER}></b></td>
+</tr>
+<tr>
+<td class="even"><{$smarty.const._AM_XPLAYER_NAME}></td>
+<td class="odd"><input type="text" name="newplayername" size="30" maxlength="30" label="<{$smarty.const._AM_XPLAYER_NEWPLAYERNAME}>">
+</td>
+</tr>
+<tr>
+<td valign="top" class="even"><{$smarty.const._AM_XPLAYER_CODE}></td>
+<td class="odd"><textarea rows="15" name="newplayer" label="<{$smarty.const._AM_XPLAYER_NEWPLAYERCODE}>"></textarea>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="even"><input type="submit" value="<{$smarty.const._SUBMIT}>" label="<{$smarty.const._SUBMIT}>"></td>
+</tr>
+</table>
+</form>

@@ -1,0 +1,30 @@
+<table class="outer" align="center" width="90%" cellspacing="5" cellpadding="5">
+<tr>
+<td class="even"><h1><{$smarty.const._AM_XPLAYER_DELCONF}> <{$genrecat}><{$playertype}><{$mpegid}>?</h1></td>
+</tr>
+<tr>
+<td class="odd">
+<{if $genrecat === true}>
+<form action="index.php" method="post">
+<input type="hidden" name="genrecat" value="<{$genrecat}>">
+<input type="hidden" name="op" value="deletegenre">
+<input type="submit" value="<{$smarty.const._AM_XPLAYER_DELETE}>" label="<{$smarty.const._AM_XPLAYER_DELETE}>">
+</form>
+<{/if}>
+<{if $playertype === true}>
+<form action="index.php" method="post">
+<input type="hidden" name="playertype" value="<{$playertype}>">
+<input type="hidden" name="op" value="deleteplayer">
+<input type="submit" value="<{$smarty.const._AM_XPLAYER_DELETE}>" label="<{$smarty.const._AM_XPLAYER_DELETE}>">
+</form>
+<{/if}>
+<{if $mpegid === true}>
+<form action="index.php" method="post">
+<input type="hidden" name="mpegid" value="<{$mpegid}>">
+<input type="hidden" name="op" value="deletesong">
+<input type="submit" value="<{$smarty.const._AM_XPLAYER_DELETE}>" label="<{$smarty.const._AM_XPLAYER_DELETE}>">
+</form>
+<{/if}>
+</td>
+</tr>
+</table>

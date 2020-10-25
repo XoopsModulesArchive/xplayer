@@ -1,0 +1,12 @@
+<{counter start=0 assign=countgenre}>
+<table width="100%" cellspacing="5" cellpadding="5" class="outer">
+<tr>
+<{foreach item=genrelist from=$genrelist }>
+<td class="<{cycle values="even,odd"}>" width="16%" align="center" style="vertical-align:middle"><a href="genre.php?genrelist=<{$genrelist}>"><{$genrelist}></a></td>
+<{counter}>
+<{if $countgenre is div by 6}>
+</tr><tr>
+<{/if}>
+<{/foreach}>
+</tr> 
+</table>

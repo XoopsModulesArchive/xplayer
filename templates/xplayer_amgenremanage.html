@@ -1,0 +1,11 @@
+<table class="outer" align="center" width="90%" cellspacing="5" cellpadding="5">
+<{foreach item=genre from=$genre }> 
+<tr>
+<td class="even"><{$genre}></td>
+<td class="odd">
+<a href="index.php?op=editgenre&amp;genrecat=<{$genre}>"><{$smarty.const._AM_XPLAYER_EDIT}></a></td>
+<td class="even">
+<a href="index.php?op=delconf&amp;genrecat=<{$genre}>"><{$smarty.const._AM_XPLAYER_DELETE}></a></td>
+</tr>
+<{/foreach}> 
+</table>

@@ -1,0 +1,37 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="outer">
+<tr>
+<td class="even">
+<div style="font-size:63px">xPlayer</div>
+<div style="font-size:11px; letter-spacing:5px;">online mpeg audio player</div>
+</td>
+</tr>
+<tr>
+<td class="odd">
+<br>
+<form method="post" action="<{$xoops_url}>/modules/xplayer/upload.php" enctype="multipart/form-data">
+<input type="hidden" name="MAX_FILE_SIZE" value="88388608">
+<{$lang_file}> <input type="file" name="mp3file" accept="audio/mpeg" size="30"><br>
+<input type="submit" value="<{$smarty.const._SUBMIT}>" label="<{$smarty.const._SUBMIT}>">
+</form>
+</td>
+</tr>
+<{if $dbsucc === true}>
+<tr><td class="even">
+<h2><{$smarty.const._MD_XPLAYER_UPLOADSUCC}></h2>
+<p><b><{$smarty.const._MD_XPLAYER_FILENAME}></b> <{$filepath}></p>
+<p><b><{$smarty.const._MD_XPLAYER_TITLE}></b> <{$title}></p>
+<p><b><{$smarty.const._MD_XPLAYER_ARTIST}></b> <{$artist}></p>
+<p><b><{$smarty.const._MD_XPLAYER_ALBUM}></b> <{$album}></p>
+<p><b><{$smarty.const._MD_XPLAYER_YEAR}></b> <{$year}></p>
+<p><b><{$smarty.const._MD_XPLAYER_COMMENT}></b> <{$comment}></p>
+<p><b><{$smarty.const._MD_XPLAYER_TRACK}></b> <{$track}></p>
+<p><b><{$smarty.const._MD_XPLAYER_GENRE}></b> <{$genre}></p>
+<p><b><{$smarty.const._MD_XPLAYER_LENGTH}></b> <{$length}></p>
+<p><b><{$smarty.const._MD_XPLAYER_BITRATE}></b> <{$bitrate}></p>
+<p><b><{$smarty.const._MD_XPLAYER_FREQUENCY}></b> <{$frequence}></p>
+</td></tr>
+<{/if}>
+<{if $dbfail === true}>
+<tr><td class="even"><h2><{$smarty.const._MD_XPLAYER_DBUPERR}></h2></td></tr> 
+<{/if}> 
+</table>

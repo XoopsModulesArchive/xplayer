@@ -1,0 +1,23 @@
+<table cellpadding="0" cellspacing="5" class="outer" width="90%" align="center">
+<tr>
+<td class="even" width="20%" align="center"><{$smarty.const._AM_XPLAYER_SHOWFILES}> 
+<form action="index.php" method="post">
+<select name="genrelist">
+<{foreach item=genrelist from=$genrelist }>
+<option><{$genrelist}></option>";
+<{/foreach}> 
+</select>
+<input type="hidden" name="op" value="showmpegs">
+<input type="submit" value="<{$smarty.const._SUBMIT}>" label="<{$smarty.const._SUBMIT}>"></form>
+</td>
+<td class="odd" width="20%" align="center">
+<a href="index.php?op=genremanager"><{$smarty.const._AM_XPLAYER_EDITGENRES}></a></td>
+<td class="even" width="20%" align="center">
+<a href="index.php?op=playermanager"><{$smarty.const._AM_XPLAYER_EDITPLAYERS}></a></td>
+<!--<td class="odd" width="15%" align="center">Batch load</td>-->
+<td class="even" width="20%" align="center">
+<a href="index.php?op=singleupload"><{$smarty.const._AM_XPLAYER_SINGLEUP}></a></td>
+<td class="odd" width="20%" align="center">
+<a href="<{$preflink}>"><{$smarty.const._AM_XPLAYER_PREFS}></a></td>
+</tr>
+</table>

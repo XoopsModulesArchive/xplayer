@@ -1,0 +1,56 @@
+<form action="index.php?op=saveeditmpegs" method="post">
+<table class="outer" cellspacing="5" cellpadding="5" width="90%" align="center">
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_ID}></b></td>
+<td class="odd" width="80%"><input type="text" name="mpegid" value="<{$id}>" size="30" maxlength="30" readonly>
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_ARTIST}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="artist" value="<{$artist}>" label="<{$smarty.const._AM_XPLAYER_ARTIST}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_TITLE}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="title" value="<{$title}>" label="<{$smarty.const._AM_XPLAYER_TITLE}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_ALBUM}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="album" value="<{$album}>" label="<{$smarty.const._AM_XPLAYER_ALBUM}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_YEAR}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="year" value="<{$year}>" label="<{$smarty.const._AM_XPLAYER_YEAR}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_COMMENT}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="comment" value="<{$comment}>" label="<{$smarty.const._AM_XPLAYER_COMMENT}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_TRACK}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="track" value="<{$track}>" label="<{$smarty.const._AM_XPLAYER_TRACK}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" width="10%"><b><{$smarty.const._AM_XPLAYER_GENRE}></b></td>
+<td class="odd" width="80%">
+<input type="text" name="genre" value="<{$genre}>" label="<{$smarty.const._AM_XPLAYER_GENRE}>" size="30" maxlength="30">
+</td>
+</tr>
+<tr>
+<td class="even" colspan="2">
+<input type="submit" value="<{$smarty.const._SUBMIT}>" label="<{$smarty.const._SUBMIT}>">
+</td>
+</tr>
+</table>
+</form>

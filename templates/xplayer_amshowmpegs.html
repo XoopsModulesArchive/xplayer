@@ -1,0 +1,12 @@
+<table width="90%" class="outer" cellspacing="5" cellpadding="5" align="center"> 
+<{section name=i loop=$filelist}>
+<tr>
+<td class="odd"><{$smarty.const._AM_XPLAYER_ID}> <{$filelist[i].id}></td>
+<td class="even"><{$filelist[i].artist}> - <{$filelist[i].title}></td>
+<td class="odd">
+<a href="index.php?op=editmpegs&amp;mpegid=<{$filelist[i].id}>"><{$smarty.const._AM_XPLAYER_EDIT}></a></td>
+<td class="even">
+<a href="index.php?op=delconf&amp;mpegid=<{$filelist[i].id}>"><{$smarty.const._AM_XPLAYER_DELETE}></a></td>
+</tr> 
+<{/section}>
+</table>

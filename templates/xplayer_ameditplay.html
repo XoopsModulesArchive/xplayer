@@ -1,0 +1,19 @@
+<form action="index.php" method="post">
+<table align="center" width="90% class="outer" cellpadding="5" cellspacing="5">
+<tr>
+<td class="odd"><h1><{$name}></h1></td>
+</tr>
+<tr>
+<td class="even">
+<textarea type="text" rows="15" style="width:90%" name="playernew">
+<{$html_code}>
+</textarea>
+<input type="hidden" name="html_code" value="<{$html_code}>">
+<input type="hidden" name="name" value="<{$name}>">
+<input type="hidden" name="op" value="changeplayer">
+<br><br>
+<input type="submit" value="<{$smarty.const._AM_XPLAYER_SAVE}>" label="<{$smarty.const._AM_XPLAYER_SAVE}>">
+</td>
+</tr>
+</table>
+</form>

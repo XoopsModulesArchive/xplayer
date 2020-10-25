@@ -1,0 +1,13 @@
+<{counter start=0 assign=countgenre}>
+<div><a href="index.php"><{$smarty.const._MD_XPLAYER_INDEX}></a> - <{$smarty.const._MD_XPLAYER_GENRE}> <{$genrelist}></div><br>
+<table width="100%" cellspacing="5" cellpadding="5" class="outer">
+<tr>
+<{section name=i loop=$filelist}>
+<td class="<{cycle values="even,odd"}>" width="33%" align="center" style="vertical-align:middle"><a href="#" onClick="window.open('player.php?id=<{$filelist[i].id}>','player','width=450,height=375')"><{$filelist[i].artist}> - <{$filelist[i].title}></a>&nbsp;<a href="<{$xoops_url}>/modules/xplayer/admin/index.php?op=editmpegs&amp;mpegid=<{$filelist[i].id}>"><img src="<{$xoops_url}>/modules/xplayer/images/editicon.gif"></a></td>
+<{counter}>
+<{if $countgenre is div by 3}>
+</tr><tr>
+<{/if}>
+<{/section}>
+</tr> 
+</table>
